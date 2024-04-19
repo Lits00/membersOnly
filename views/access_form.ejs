@@ -1,0 +1,32 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navbar') %>
+  <main>
+    <% if (title === 'Be a Member') { %>
+        <p>Membership Access:</p>
+        <ul>
+            <li>Show post detail such as author and creation date.</li>
+        </ul>
+        <p>Enter the <strong>secret</strong> code to gain a membership access.</p>
+        <form action="/membership" method="post">
+            <input type="password" name="password" placeholder="Membership code">
+            <button type="submit">Submit</button>
+        </form>
+    <% } else { %>
+        <p>Admin Access:</p>
+        <ul>
+            
+            <li>Show post detail such as author and creation date.</li>
+            <li>Enables you to delete post.</li>
+        </ul>
+        <p>Enter the secret code.</p>
+        <p><strong>Hint:</strong> something that you currently see.</p>
+        <form action="/admin-status" method="post">
+            <input type="password" name="password" placeholder="Admin code">
+            <button type="submit">Submit</button>
+        </form>
+    <% } %>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

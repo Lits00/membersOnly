@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navbar') %>
+  <main>
+    <article class="px-5 text-center">
+        <% if(errors.length) { %>
+            <% errors.forEach(error => {  %>
+                <p class="err"><%= error.msg %></p>
+            <% }) %>
+        <% } %>
+        <a class="btn btn-dark" href="/">Return</a>
+    </article>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

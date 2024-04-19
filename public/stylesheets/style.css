@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.brand {
+  font-family: 'Nunito', sans-serif;
+}
+
+.redirect, .redirectForm {
+  color: #000 !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+textarea {
+  min-width: 65vw;
+  resize: none !important;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login-Signup Form */
+.userForm {
+  max-width: fit-content;
+  margin: 1.5rem auto 0;
+}
+
+.postContainer {
+  max-height: 55vh;
+  overflow-y: auto;
+  border: #888 1px solid;
+  border-radius: .3rem;
+}
+
+.err {
+  color: #ff0000;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: .3rem; /* width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the scrollbar track */
+  border-radius: 1rem;
+}

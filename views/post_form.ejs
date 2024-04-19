@@ -1,0 +1,13 @@
+<% if (currentUser) { %>
+    <section class="postForm mx-3 pt-2 d-flex justify-content-center">
+        <form action="/new-post" method="post">
+            <div class="d-flex">
+                <div class="d-flex flex-column">
+                    <input type="text" name="title" placeholder="Title">
+                    <textarea name="text" id="" rows="1" placeholder="Message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark btn-sm">Post</button>
+            </div>
+        </form>
+    </section>
+<% } %> 

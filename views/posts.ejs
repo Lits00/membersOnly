@@ -1,0 +1,25 @@
+<section class="postContainer mx-3">
+    <% if (posts.length) { %>
+        <% for(post of posts){ %>
+            <div class="card postCard my-2">
+                <div class="card-header d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                        <h4><%= post.title %></h4>
+                        <% if(currentUser && currentUser.isAdmin) { %>
+                            <a class="deletePost btn btn-danger btn-sm" href="/delete<%= post.url %>">Delete</a>
+                        <% } %>
+                    </div>
+                    <% if(currentUser && (currentUser.isMember || currentUser.isAdmin)) { %>
+                        <div class="d-flex justify-content-between">
+                            <p>Author: <strong><%= post.user.fullName %></strong></p>
+                            <p><strong>Posted on:</strong> <%= post.dateFormat %></p>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="card-body">
+                    <p><%= post.text %></p>
+                </div>
+            </div>
+        <% } %>
+    <% } %>
+  </section>

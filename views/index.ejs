@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/navbar') %>
+  <main>
+    <% if(currentUser) { %>
+      <section class="text-center pb-3">
+        <h1>Hello, <%= currentUser.fullName %> </h1>
+        <% if(currentUser.isMember && currentUser.isAdmin) { %>
+          <p>You have <strong>Admin</strong> and <strong>Membership</strong> access.</p>
+        <% } else if (currentUser.isMember) { %>
+          <p>You have <strong>Membership</strong> access.</p>
+        <% } else if (currentUser.isAdmin) { %>
+          <p>You have <strong>Admin</strong> access.</p>
+        <% } else { %>
+          <p>You don't have a <strong>Membership</strong> or <strong>Admin</strong> access.</p>
+        <% } %>
+      </section>
+
+      <%- include('posts') %>
+      
+      <%- include('post_form') %>
+    <% } else { %>
+      <section>
+        <h1 class="text-center">Welcome to MembersClub!</h1>
+      </section>
+      <%- include('posts') %>
+    <% } %>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>
